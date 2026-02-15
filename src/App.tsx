@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import FlappyBird from "./pages/FlappyBird";
 import Snake from "./pages/Snake";
 import MatchThree from "./pages/MatchThree";
+import PixelRunner from "./pages/PixelRunner";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/flappy-bird" element={<FlappyBird />} />
           <Route path="/snake" element={<Snake />} />
           <Route path="/match-three" element={<MatchThree />} />
+          <Route path="/pixel-runner" element={<PixelRunner />} />
         </Routes>
       </main>
     </div>

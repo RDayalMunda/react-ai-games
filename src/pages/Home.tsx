@@ -23,6 +23,13 @@ const games = [
     path: "/match-three",
     emoji: "💎",
   },
+  {
+    title: "Pixel Runner",
+    description:
+      "Jump across platforms, dodge obstacles, and collect coins in this endless runner!",
+    path: "/pixel-runner",
+    emoji: "🏃",
+  },
 ];
 
 function Home() {
