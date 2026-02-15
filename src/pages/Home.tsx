@@ -30,6 +30,13 @@ const games = [
     path: "/pixel-runner",
     emoji: "🏃",
   },
+  {
+    title: "Space Invaders",
+    description:
+      "Defend Earth from waves of descending aliens! Dodge enemy fire and destroy them all.",
+    path: "/space-invaders",
+    emoji: "👾",
+  },
 ];
 
 function Home() {
