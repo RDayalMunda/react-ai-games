@@ -180,12 +180,14 @@
   background: #0f0f1a;
   display: flex;
   flex-direction: column;
+  touch-action: none;
 }
 
 .snake-canvas {
   flex: 1;
   display: block;
   width: 100%;
+  touch-action: none;
 }
 
 /* ── HUD ─────────────────────────────────────────────── */

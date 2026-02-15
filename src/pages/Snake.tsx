@@ -417,10 +417,15 @@ function Snake() {
 
     // ── Touch / swipe ──
     function onTouchStart(e: TouchEvent) {
+      e.preventDefault()
       const t = e.touches[0]
       touchStartRef.current = { x: t.clientX, y: t.clientY }
     }
+    function onTouchMove(e: TouchEvent) {
+      e.preventDefault()
+    }
     function onTouchEnd(e: TouchEvent) {
+      e.preventDefault()
       if (!touchStartRef.current) return
       const t = e.changedTouches[0]
       const dx = t.clientX - touchStartRef.current.x
@@ -444,8 +449,9 @@ function Snake() {
     }
 
     window.addEventListener('keydown', onKey)
-    canvas.addEventListener('touchstart', onTouchStart, { passive: true })
-    canvas.addEventListener('touchend', onTouchEnd, { passive: true })
+    canvas.addEventListener('touchstart', onTouchStart, { passive: false })
+    canvas.addEventListener('touchmove', onTouchMove, { passive: false })
+    canvas.addEventListener('touchend', onTouchEnd, { passive: false })
 
     return () => {
       cancelAnimationFrame(rafRef.current)
@@ -453,6 +459,7 @@ function Snake() {
       window.removeEventListener('resize', resize)
       window.removeEventListener('keydown', onKey)
       canvas.removeEventListener('touchstart', onTouchStart)
+      canvas.removeEventListener('touchmove', onTouchMove)
       canvas.removeEventListener('touchend', onTouchEnd)
     }
   }, [gameState, tick, togglePause])

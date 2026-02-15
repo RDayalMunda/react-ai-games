@@ -5,6 +5,7 @@
   background: #000;
   display: flex;
   flex-direction: column;
+  touch-action: none;
 }
 
 .flappy-canvas {
@@ -12,6 +13,7 @@
   display: block;
   width: 100%;
   cursor: pointer;
+  touch-action: none;
 }
 
 .flappy-hud {
