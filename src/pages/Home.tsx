@@ -8,6 +8,12 @@ const games = [
     path: '/flappy-bird',
     emoji: '🐦',
   },
+  {
+    title: 'Snake',
+    description: 'Guide the snake, eat food, and grow longer. How long can you survive?',
+    path: '/snake',
+    emoji: '🐍',
+  },
 ]
 
 function Home() {

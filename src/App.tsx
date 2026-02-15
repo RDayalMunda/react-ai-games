@@ -1,6 +1,7 @@
 import { Routes, Route, Link, useLocation } from 'react-router'
 import Home from './pages/Home'
 import FlappyBird from './pages/FlappyBird'
+import Snake from './pages/Snake'
 import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/flappy-bird" element={<FlappyBird />} />
+          <Route path="/snake" element={<Snake />} />
         </Routes>
       </main>
     </div>
