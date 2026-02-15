@@ -1,12 +1,13 @@
-import { Routes, Route, Link, useLocation } from 'react-router'
-import Home from './pages/Home'
-import FlappyBird from './pages/FlappyBird'
-import Snake from './pages/Snake'
-import './App.css'
+import { Routes, Route, Link, useLocation } from "react-router";
+import Home from "./pages/Home";
+import FlappyBird from "./pages/FlappyBird";
+import Snake from "./pages/Snake";
+import MatchThree from "./pages/MatchThree";
+import "./App.css";
 
 function App() {
-  const location = useLocation()
-  const isHome = location.pathname === '/'
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
     <div className="app">
@@ -26,10 +27,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/flappy-bird" element={<FlappyBird />} />
           <Route path="/snake" element={<Snake />} />
+          <Route path="/match-three" element={<MatchThree />} />
         </Routes>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

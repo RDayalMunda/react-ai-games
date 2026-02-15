@@ -1,20 +1,29 @@
-import GameCard from '../components/GameCard'
-import './Home.css'
+import GameCard from "../components/GameCard";
+import "./Home.css";
 
 const games = [
   {
-    title: 'Flappy Bird',
-    description: 'Tap to fly through the pipes! A classic arcade game that tests your timing and reflexes.',
-    path: '/flappy-bird',
-    emoji: '🐦',
+    title: "Flappy Bird",
+    description:
+      "Tap to fly through the pipes! A classic arcade game that tests your timing and reflexes.",
+    path: "/flappy-bird",
+    emoji: "🐦",
   },
   {
-    title: 'Snake',
-    description: 'Guide the snake, eat food, and grow longer. How long can you survive?',
-    path: '/snake',
-    emoji: '🐍',
+    title: "Snake",
+    description:
+      "Guide the snake, eat food, and grow longer. How long can you survive?",
+    path: "/snake",
+    emoji: "🐍",
   },
-]
+  {
+    title: "Match Three",
+    description:
+      "Swap and match colorful gems in this addictive puzzle game. Race against the clock!",
+    path: "/match-three",
+    emoji: "💎",
+  },
+];
 
 function Home() {
   return (
@@ -31,7 +40,7 @@ function Home() {
         ))}
       </section>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
